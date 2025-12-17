@@ -1,5 +1,8 @@
 name: workflow-ci-mlflow
 
+docker_env:
+  image: naylaaputrimh/workflow-ci-mlflow
+
 entry_points:
   main:
     command: "python modelling.py"

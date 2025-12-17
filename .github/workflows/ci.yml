@@ -34,5 +34,6 @@ jobs:
 
     - name: Build Docker image via MLflow Project
       run: |
-        mlflow run MLProject --env-manager=local --docker-image-name naylaaputrimh/workflow-ci-mlflow
+       mlflow run MLProject
+
 
