@@ -5,4 +5,4 @@ docker_env:
 
 entry_points:
   main:
-    command: "cd MLProject && python modelling.py"
+    command: "sh -c 'cd MLProject && python modelling.py'"
