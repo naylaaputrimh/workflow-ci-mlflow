@@ -1,9 +1,5 @@
 name: workflow-ci-mlflow
 
-docker_env:
-  image: python:3.9-slim
-
 entry_points:
   main:
     command: "python modelling.py"
-
