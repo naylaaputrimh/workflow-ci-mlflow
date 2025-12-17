@@ -32,8 +32,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
 
-    - name: Build Docker image with MLflow
+    - name: Build Docker image via MLflow Project
       run: |
-        mlflow models build-docker \
-          -m mlruns \
-          -n naylaaputrimh/workflow-ci-mlflow
+        mlflow run MLProject --env-manager=local --docker-image-name naylaaputrimh/workflow-ci-mlflow
+
