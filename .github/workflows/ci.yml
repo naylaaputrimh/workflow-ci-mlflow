@@ -26,8 +26,8 @@ jobs:
       run: |
         mlflow run MLProject
 
-- name: Upload MLflow artifacts
-  uses: actions/upload-artifact@v3
-  with:
-    name: mlflow-artifacts
-    path: mlruns
+    - name: Upload MLflow artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: mlflow-artifacts
+        path: mlruns
