@@ -1,7 +1,7 @@
 name: workflow-ci-mlflow
 
 docker_env:
-  image: naylaaputrimh/workflow-ci-mlflow
+  image: python:3.9-slim
 
 entry_points:
   main:

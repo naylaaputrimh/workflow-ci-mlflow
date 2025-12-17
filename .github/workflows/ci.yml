@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  train-and-docker:
+  train-model:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,22 +18,10 @@ jobs:
       with:
         python-version: "3.9"
 
-    - name: Install MLflow
+    - name: Install dependencies
       run: |
         pip install mlflow pandas scikit-learn
 
     - name: Run MLflow Project
       run: |
         mlflow run MLProject --env-manager=local
-
-    - name: Log in to Docker Hub
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_TOKEN }}
-
-    - name: Build Docker image via MLflow Project
-      run: |
-       mlflow run MLProject
-
-
